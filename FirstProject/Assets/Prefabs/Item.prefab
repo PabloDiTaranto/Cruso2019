@@ -4797,6 +4797,7 @@ GameObject:
   - component: {fileID: 3982601138231889888}
   - component: {fileID: 3982601138231889889}
   - component: {fileID: 3982601138231889890}
+  - component: {fileID: 6871564210962561424}
   - component: {fileID: 3982601138231889894}
   m_Layer: 0
   m_Name: Health Item
@@ -4879,6 +4880,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6871564210962561424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982601138231889891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9ec13f29d1547817a07eae798c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &3982601138231889894
 Animator:
   serializedVersion: 3
