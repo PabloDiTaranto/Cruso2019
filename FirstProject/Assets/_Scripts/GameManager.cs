@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int maxItems = 4;
 
     public bool showWinScreen = false;
+    public bool showLossScreen = false;
     
     private int _itemsCollected = 0;
     public int ItemsCollected
@@ -24,9 +25,7 @@ public class GameManager : MonoBehaviour
 
             if (_itemsCollected >= maxItems)
             {
-                labelText = "Has encontrado todos los items";
-                showWinScreen = true;
-                Time.timeScale = 0;
+                GameOver(true);
             }
             else
             {
@@ -49,6 +48,14 @@ public class GameManager : MonoBehaviour
             if (value >= 0 && value <= 3)
             {
                 _playerHp = value;
+                if (_playerHp <= 0)
+                {
+                    GameOver(false);
+                }
+                else
+                {
+                    labelText = "Ouch, me han dado...";
+                }
             }
             Debug.LogFormat("HP: {0}", _playerHp);
         }
@@ -59,17 +66,35 @@ public class GameManager : MonoBehaviour
     {
         GUI.Box(new Rect(25, 25, 180, 25), "Vida: " + _playerHp);
         GUI.Box(new Rect(25, 65, 180, 25), "Items Recogidos: " + _itemsCollected);
-        GUI.Label(new Rect(Screen.width/2 - 100, Screen.height - 50, 200, 50), labelText);
+        GUI.Box(new Rect(Screen.width/2 - 200, Screen.height - 50, 400, 50), labelText);
         if (showWinScreen)
         {
-            if (GUI.Button(new Rect(Screen.width/2 -200,
-                        Screen.height/2 -100,
-                        400, 200),
-                        "Has Ganado"))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                Time.timeScale = 1;
-            }
+            ShowEndLevel("HAS GANADO");
         }
+
+        if (showLossScreen)
+        {
+            ShowEndLevel("GAME OVER");
+        }
+    }
+
+    private void ShowEndLevel(string message)
+    {
+        if (GUI.Button(new Rect(Screen.width/2 -200,
+                    Screen.height/2 -100,
+                    400, 200),
+                    message))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 1;
+        }
+    }
+
+    private void GameOver(bool gameWon)
+    {
+        labelText = gameWon? "Has encontrado todos los items" : "Has Muerto. Prueba otra vez";
+        showWinScreen = gameWon;
+        showLossScreen = !gameWon;
+        Time.timeScale = 0;
     }
 }

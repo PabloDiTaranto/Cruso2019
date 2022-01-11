@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform shootPoint;
     public float shootSpeed = 100f;
+
+    private GameManager gameManager;
     
     
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -86,5 +89,13 @@ public class PlayerController : MonoBehaviour
                                                 groundLayer,
                                                 QueryTriggerInteraction.Ignore);
         return onTheGround;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            gameManager.PlayerHp--;
+        }
     }
 }
