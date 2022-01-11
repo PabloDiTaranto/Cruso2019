@@ -2782,7 +2782,7 @@ GameObject:
   - component: {fileID: 1116717480}
   - component: {fileID: 1116717479}
   - component: {fileID: 1116717478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3007,6 +3007,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644ab76b5b901934b9ad1c616f424276, type: 3}
+--- !u!1 &1431087054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431087056}
+  - component: {fileID: 1431087055}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1431087055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431087054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1a9f0053f85c74bab38719653cce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labelText: Recolecta 4 items y ganate la libertad
+  maxItems: 4
+  showWinScreen: 0
+--- !u!4 &1431087056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431087054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551830230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,12 +3991,12 @@ PrefabInstance:
     - target: {fileID: 6057028960244191529, guid: 51ac8c5b8e94c5b4082849cbcf67ca15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.001
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6057028960244191529, guid: 51ac8c5b8e94c5b4082849cbcf67ca15,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.977
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 6057028960244191529, guid: 51ac8c5b8e94c5b4082849cbcf67ca15,
         type: 3}
