@@ -2,15 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomExtentions;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IManager
 {
     public string labelText = "Recolecta 4 items y ganate la libertad";
-    public int maxItems = 4;
+    public const int MAX_ITEMS = 4;
 
     public bool showWinScreen = false;
     public bool showLossScreen = false;
+
+    public delegate void DebugFromDelegate(string text);
+    
+    public DebugFromDelegate debug = Print;
+
+    public static void Print(string  text)
+    {
+        Debug.Log(text);
+    }
     
     private int _itemsCollected = 0;
     public int ItemsCollected
@@ -23,14 +33,14 @@ public class GameManager : MonoBehaviour
         {
             _itemsCollected = value;
 
-            if (_itemsCollected >= maxItems)
+            if (_itemsCollected >= MAX_ITEMS)
             {
                 GameOver(true);
             }
             else
             {
                 labelText = "Item encontrado te faltan " +
-                            (maxItems - _itemsCollected);
+                            (MAX_ITEMS - _itemsCollected);
             }
             Debug.LogFormat("Items: {0}", _itemsCollected);
         }
@@ -61,6 +71,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private string _state;
+    public string State
+    {
+        get { return _state;}
+        set { _state = value; }
+    }
+
+    public void Initialize()
+    {
+        
+    }
+
 
     private void OnGUI()
     {
@@ -85,7 +107,7 @@ public class GameManager : MonoBehaviour
                     400, 200),
                     message))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Utilities.RestartCurrentLevel();
             Time.timeScale = 1;
         }
     }
@@ -96,5 +118,10 @@ public class GameManager : MonoBehaviour
         showWinScreen = gameWon;
         showLossScreen = !gameWon;
         Time.timeScale = 0;
+    }
+
+    private void Start()
+    {
+        debug("hola");
     }
 }
