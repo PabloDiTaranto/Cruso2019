@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static bool playerCreated;
+    
     public float speed = 5f;
 
     private const string AXIS_H = "Horizontal", AXIS_V = "Vertical", WALK ="Walking",
@@ -14,9 +16,11 @@ public class PlayerController : MonoBehaviour
 
     private bool walking;
     
-    private Vector2 lastMovement = Vector2.zero;
+    public Vector2 lastMovement = Vector2.zero;
 
     private Rigidbody2D _rigidbody2D;
+
+    public string nextUuid;
     
     
     // Start is called before the first frame update
@@ -24,6 +28,8 @@ public class PlayerController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        
+        playerCreated = true;
     }
 
     // Update is called once per frame
@@ -37,7 +43,7 @@ public class PlayerController : MonoBehaviour
                                               //* speed * Time.deltaTime, 0, 0);
             //transform.Translate(translation);
 
-            _rigidbody2D.velocity = new Vector2(Input.GetAxisRaw(AXIS_H) * speed, _rigidbody2D.velocity.y);
+            _rigidbody2D.velocity = new Vector2(Input.GetAxisRaw(AXIS_H) * speed, 0);
 
             walking = true;
 
@@ -52,7 +58,7 @@ public class PlayerController : MonoBehaviour
             
             walking = true;
             
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Input.GetAxisRaw(AXIS_V) * speed);
+            _rigidbody2D.velocity = new Vector2(0, Input.GetAxisRaw(AXIS_V) * speed);
 
 
             lastMovement = new Vector2(0, Input.GetAxisRaw(AXIS_V));
