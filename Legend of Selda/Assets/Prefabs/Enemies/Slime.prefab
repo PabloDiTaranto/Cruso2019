@@ -170,8 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1bc965143d36546bc3e358f569dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRevivePlayer: 2
   damage: 10
+  canvasDamage: {fileID: 4720788282230313447, guid: a56ed83752e58084fa768aaa79c43a14,
+    type: 3}
 --- !u!114 &3662923655381753355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,4 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d92029c6b68db4b98f0aec66eb661c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 180

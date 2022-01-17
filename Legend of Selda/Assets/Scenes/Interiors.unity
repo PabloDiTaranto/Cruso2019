@@ -18672,7 +18672,7 @@ PrefabInstance:
     - target: {fileID: 6307301230996468403, guid: 86199d9ba39cb2a4f8a9cba5a14fbfd5,
         type: 3}
       propertyPath: uuid
-      value: Village stone
+      value: Village Stone
       objectReference: {fileID: 0}
     - target: {fileID: 8993480882946335492, guid: 86199d9ba39cb2a4f8a9cba5a14fbfd5,
         type: 3}

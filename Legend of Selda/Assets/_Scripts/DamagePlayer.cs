@@ -12,6 +12,7 @@ public class DamagePlayer : MonoBehaviour
     private GameObject _player;
     */
     public int damage;
+    public GameObject canvasDamage;
     
 
     // Update is called once per frame
@@ -32,6 +33,10 @@ public class DamagePlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            GameObject clone = Instantiate(canvasDamage,
+                other.gameObject.transform.position,
+                Quaternion.Euler(Vector3.zero));
+            clone.GetComponent<DamageNumber>().damagePoints = damage;
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
         }
     }
