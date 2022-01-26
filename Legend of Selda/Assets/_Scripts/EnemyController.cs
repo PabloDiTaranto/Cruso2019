@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(CharacterStats), typeof(HealthManager))]
 public class EnemyController : MonoBehaviour
 {
     [Tooltip("Velocidad de movimiento del enemigo")]

@@ -22,6 +22,8 @@ public class HealthManager : MonoBehaviour
     private float flashCounter;
 
     private SpriteRenderer _spriteRenderer;
+
+    public int expWhenDefeated;
     
     
     // Start is called before the first frame update
@@ -63,6 +65,10 @@ public class HealthManager : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            if (expWhenDefeated > 0)
+            {
+                GameObject.Find("Player").GetComponent<CharacterStats>().AddExperiencie(expWhenDefeated);
+            }
             gameObject.SetActive(false);
         }
 

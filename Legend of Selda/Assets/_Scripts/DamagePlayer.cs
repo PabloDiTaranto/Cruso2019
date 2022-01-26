@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +12,15 @@ public class DamagePlayer : MonoBehaviour
     */
     public int damage;
     public GameObject canvasDamage;
-    
+
+    private CharacterStats _statsPlayer;
+    private CharacterStats _stats;
+
+    private void Start()
+    {
+        _statsPlayer = GameObject.Find("Player").GetComponent<CharacterStats>();
+        _stats = GetComponent<CharacterStats>();
+    }
 
     // Update is called once per frame
     /*void Update()
@@ -33,11 +40,24 @@ public class DamagePlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            float strFac = 1 + _stats.strengthLevels[_stats.level] / CharacterStats.MAX_STAT_VALUE;
+            float plFac = 1 - _statsPlayer.defenseLevels[_statsPlayer.level] / CharacterStats.MAX_STAT_VALUE;
+            int totalDamage = Mathf.Clamp((int)(damage * strFac * plFac),
+                                        1, CharacterStats.MAX_HEALTH);
+
+            if (Random.Range(0, CharacterStats.MAX_STAT_VALUE) < _statsPlayer.luckLevels[_statsPlayer.level])
+            {
+                if (Random.Range(0, CharacterStats.MAX_STAT_VALUE) > _stats.accuracyLevels[_stats.level])
+                {
+                    totalDamage = 0;
+                }
+            }
+            
             GameObject clone = Instantiate(canvasDamage,
                 other.gameObject.transform.position,
                 Quaternion.Euler(Vector3.zero));
-            clone.GetComponent<DamageNumber>().damagePoints = damage;
-            other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
+            clone.GetComponent<DamageNumber>().damagePoints = totalDamage;
+            other.gameObject.GetComponent<HealthManager>().DamageCharacter(totalDamage);
         }
     }
 }
