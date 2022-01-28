@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool canMove = true;
+    public bool canMove = true, isTalking;
     
     public static bool playerCreated;
     
@@ -36,11 +36,18 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         
         playerCreated = true;
+
+        isTalking = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isTalking)
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+            return;
+        }
         walking = false;
 
         if (!canMove)

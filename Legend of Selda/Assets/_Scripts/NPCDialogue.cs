@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class NPCDialogue : MonoBehaviour
 {
-    public string npcName, npcDialogue;
+    public string npcName;
+    public string[] npcDialogueLines;
 
     public Sprite npcSprite;
 
@@ -41,7 +42,14 @@ public class NPCDialogue : MonoBehaviour
     {
         if (playerInZone && Input.GetMouseButtonDown(1))
         {
-            string finalDialogue = (npcName != null ? npcName + "\n" : "") + npcDialogue;
+            string[] finalDialogue = new string[npcDialogueLines.Length];
+
+            int i = 0;
+            foreach (var line in npcDialogueLines)
+            {
+                finalDialogue[i++] = (npcName != null ? npcName + "\n" : "") + line;
+            }
+            
             
             if (npcSprite != null)
             {
@@ -50,6 +58,11 @@ public class NPCDialogue : MonoBehaviour
             else
             {
                 _dialogueManager.ShowDialogue(finalDialogue);
+            }
+
+            if (gameObject.GetComponentInParent<NPCMovement>() != null)
+            {
+                gameObject.GetComponentInParent<NPCMovement>().isTalking = true;
             }
         }
     }

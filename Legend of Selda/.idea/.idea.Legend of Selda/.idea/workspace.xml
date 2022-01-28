@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b55a90e-aff7-4904-9c7f-64509a29036e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/Man@Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkDown.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkDown.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkLeft.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkLeft.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkRight.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkRight.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkUp.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC@WalkUp.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC_Man.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC_Man.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC_Woman.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anims/NPC/NPC_Woman.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ButtonWeapon.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ButtonWeapon.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/NPCs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/NPCs/NPCMan Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/NPCs/NPCMan Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/NPCs/NPCWoman.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/NPCs/NPCWoman.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/CharacterStats.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/DialogueManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/DialogueManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/InventoryButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/InventoryButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/NPCDialogue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/NPCDialogue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/NPCMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/NPCMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/WeaponManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DamagePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DamagePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/WeaponDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/WeaponDamage.cs" afterDir="false" />
-    </list>
+    <list default="true" id="5b55a90e-aff7-4904-9c7f-64509a29036e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,6 +79,7 @@
       <workItem from="1642854499879" duration="1890000" />
       <workItem from="1643032706592" duration="2205000" />
       <workItem from="1643049315282" duration="1908000" />
+      <workItem from="1643334021126" duration="2780000" />
     </task>
     <servers />
   </component>

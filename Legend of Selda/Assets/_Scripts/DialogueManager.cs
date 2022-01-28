@@ -14,8 +14,10 @@ public class DialogueManager : MonoBehaviour
     public string[] dialogueLines;
     public int currentDialogueLine;
 
+    private PlayerController _playerController;
     private void Start()
     {
+        _playerController = FindObjectOfType<PlayerController>();
         CloseDialogue();
     }
 
@@ -24,26 +26,40 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
-            CloseDialogue();
+            currentDialogueLine++;
+            
+            if (currentDialogueLine >= dialogueLines.Length)
+            {
+                CloseDialogue();
+            }
+            else
+            {
+                dialogueText.text = dialogueLines[currentDialogueLine];
+            }
         }
     }
 
-    public void ShowDialogue(string text)
+    public void ShowDialogue(string[] lines)
     {
+        currentDialogueLine = 0;
+        dialogueLines = lines;
         dialogueActive = true;
         dialogueBox.SetActive(true);
-        dialogueText.text = text;
+        dialogueText.text = dialogueLines[currentDialogueLine];
+        _playerController.isTalking = true;
     }
 
-    public void ShowDialogue(string text, Sprite sprite)
+    public void ShowDialogue(string[] lines, Sprite sprite)
     {
-        ShowDialogue(text);
+        ShowDialogue(lines);
         avatarImage.enabled = true;
         avatarImage.sprite = sprite;
     }
 
     public void CloseDialogue()
     {
+        _playerController.isTalking = false;
+        currentDialogueLine = 0;
         dialogueActive = false;
         avatarImage.enabled = false;
         dialogueBox.SetActive(false);

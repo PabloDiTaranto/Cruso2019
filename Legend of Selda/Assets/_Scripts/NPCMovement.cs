@@ -14,7 +14,7 @@ public class NPCMovement : MonoBehaviour
 
     private Animator _animator;
 
-    public bool bIsWalking;
+    public bool bIsWalking, isTalking;
 
     public float walkTime = 1.5f;
     private float walkCounter;
@@ -29,10 +29,14 @@ public class NPCMovement : MonoBehaviour
     private int currentDirection;
 
     public BoxCollider2D villagerZone;
+
+    private DialogueManager _dialogueManager;
     
     // Start is called before the first frame update
     void Start()
     {
+        _dialogueManager = FindObjectOfType<DialogueManager>();
+        isTalking = false;
         _animator = GetComponent<Animator>();
         walkCounter = walkTime;
         waitCounter = waitTime;
@@ -42,6 +46,12 @@ public class NPCMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isTalking)
+        {
+            isTalking = _dialogueManager.dialogueActive;
+            StopWalking();
+            return;
+        }
         if (bIsWalking)
         {
             if (transform.position.x < villagerZone.bounds.min.x ||
