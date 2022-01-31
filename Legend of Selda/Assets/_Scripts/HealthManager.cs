@@ -24,11 +24,15 @@ public class HealthManager : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     public int expWhenDefeated;
-    
+
+    private QuestEnemy quest;
+    private QuestManager _questManager;
     
     // Start is called before the first frame update
     void Start()
     {
+        _questManager = FindObjectOfType<QuestManager>();
+        quest = GetComponent<QuestEnemy>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         UpdateMaxHealth(maxHealth);
     }
@@ -68,6 +72,7 @@ public class HealthManager : MonoBehaviour
             if (expWhenDefeated > 0)
             {
                 GameObject.Find("Player").GetComponent<CharacterStats>().AddExperiencie(expWhenDefeated);
+                _questManager.enemyKilled = quest;
             }
             gameObject.SetActive(false);
         }

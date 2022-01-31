@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8271534854156724010}
   - component: {fileID: 3662923655381753355}
   - component: {fileID: 377071572808207430}
+  - component: {fileID: -2284098734642246670}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -211,3 +212,16 @@ MonoBehaviour:
   speedLevels: 00000000050000000a000000
   luckLevels: 00000000050000000a000000
   accuracyLevels: 05000000080000000a000000
+--- !u!114 &-2284098734642246670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5395205103509385560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a5f049675cfdb4ea626e0e23d544b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Red Slime
