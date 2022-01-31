@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b55a90e-aff7-4904-9c7f-64509a29036e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/Cape.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/Cape.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/QuestGoToPlace.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/QuestGoToPlace.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/QuestSpot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Quests/QuestSpot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Quest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Quest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/ItemsManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/ItemsManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ForestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anims/Player/Player@AttackDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anims/Player/Player@AttackDown.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/InventoryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/InventoryButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/QuestItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/QuestItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/WeaponDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/WeaponDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/WeaponManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +93,7 @@
       <workItem from="1643049315282" duration="1908000" />
       <workItem from="1643334021126" duration="2780000" />
       <workItem from="1643631947776" duration="9049000" />
+      <workItem from="1643648765895" duration="2747000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,8 @@ public class QuestItem : MonoBehaviour
 
     private QuestManager _questManager;
 
+    private ItemsManager _itemsManager;
+
     public string itemName;
     
    
@@ -19,6 +21,7 @@ public class QuestItem : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             _questManager = FindObjectOfType<QuestManager>();
+            _itemsManager = FindObjectOfType<ItemsManager>();
             Quest q = _questManager.QuestWithID(questID);
             if (q == null)
             {
@@ -28,6 +31,7 @@ public class QuestItem : MonoBehaviour
             if (q.gameObject.activeInHierarchy && !q.questCompleted)
             {
                 _questManager.itemCollected = this;
+                _itemsManager.AddQuestItem(gameObject);
                 gameObject.SetActive(false);
             }
         }
