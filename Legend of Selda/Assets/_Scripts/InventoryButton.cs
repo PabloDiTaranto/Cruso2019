@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +19,6 @@ public class InventoryButton : MonoBehaviour
         {
             case ItemType.WEAPON:
                 FindObjectOfType<WeaponManager>().ChangeWeapon(itemIdx);
-                FindObjectOfType<UIManager>().inventoryText.text = 
-                    FindObjectOfType<WeaponManager>().GetWeaponAt(itemIdx).weaponName;
                 break;
             
             case ItemType.ITEM:
@@ -33,11 +32,45 @@ public class InventoryButton : MonoBehaviour
             case ItemType.RING:
                 Debug.Log("No implementado");
                 break;
+        }
+        
+        ShowDescription();
+    }
+
+ 
+
+    public void ShowDescription()
+    {
+        string desc = "";
+        switch (type)   
+        {
+            case ItemType.WEAPON:
+                desc = FindObjectOfType<WeaponManager>().GetWeaponAt(itemIdx).weaponName;
+                break;
+            
+            case ItemType.ITEM:
+                desc = "Item consumible";
+                break;
+            
+            case ItemType.ARMOR:
+                desc = FindObjectOfType<WeaponManager>().GetArmorAt(itemIdx).name;
+                break;
+            
+            case ItemType.RING:
+                desc = FindObjectOfType<WeaponManager>().GetRingAt(itemIdx).name;
+                break;
             
             case ItemType.SPECIAL_ITEMS:
                 QuestItem item = FindObjectOfType<ItemsManager>().GetItemAt(itemIdx);
-                FindObjectOfType<UIManager>().inventoryText.text = item.itemName;
+                desc = item.itemName;
                 break;
         }
+
+        FindObjectOfType<UIManager>().inventoryText.text = desc;
+    }
+
+    public void ClearDescription()
+    {
+        FindObjectOfType<UIManager>().inventoryText.text = "";
     }
 }
