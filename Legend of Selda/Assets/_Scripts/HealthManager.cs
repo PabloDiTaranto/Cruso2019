@@ -65,6 +65,7 @@ public class HealthManager : MonoBehaviour
 
     public void DamageCharacter(int damage)
     {
+        SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.HIT);
         _currentHealth -= damage;
 
         if (_currentHealth <= 0)
@@ -74,6 +75,12 @@ public class HealthManager : MonoBehaviour
                 GameObject.Find("Player").GetComponent<CharacterStats>().AddExperiencie(expWhenDefeated);
                 _questManager.enemyKilled = quest;
             }
+
+            if (gameObject.CompareTag("Player"))
+            {
+                SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.DIE);
+            }
+            
             gameObject.SetActive(false);
         }
 
