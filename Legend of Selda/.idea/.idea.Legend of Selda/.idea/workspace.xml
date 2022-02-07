@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b55a90e-aff7-4904-9c7f-64509a29036e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/MissionEnd.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/MissionEnd.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/MissionStart.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/MissionStart.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/StandardMixer.mixer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/StandardMixer.mixer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/SFXManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/SFXManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/SFXType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/SFXType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legend of Selda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/FanfareIntro.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/FanfareIntro.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/FanfareOutro.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/FanfareOutro.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Blood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GoToNewPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GoToNewPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HealthManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Quest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SFXManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +88,7 @@
       <workItem from="1643855041692" duration="1555000" />
       <workItem from="1643935150772" duration="3062000" />
       <workItem from="1644003701549" duration="3015000" />
+      <workItem from="1644255348807" duration="405000" />
     </task>
     <servers />
   </component>

@@ -28,16 +28,13 @@ public class SFXManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         audios = new List<GameObject>();
+
+        GameObject sounds = GameObject.Find("Sounds");
         
-        foreach (Transform t in transform)
+        foreach (Transform t in sounds.transform)
         {
             audios.Add(t.gameObject);
         }
-    }
-
-    private void Start()
-    {
-       
     }
 
     public AudioSource FindAudioSource(SFXType.SoundType type)

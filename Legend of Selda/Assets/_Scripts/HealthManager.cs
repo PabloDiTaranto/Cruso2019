@@ -15,6 +15,17 @@ public class HealthManager : MonoBehaviour
         {
             return _currentHealth;
         }
+        set
+        {
+            if (value < 0)
+            {
+                _currentHealth = 0;
+            }
+            else
+            {
+                _currentHealth = value;
+            }
+        }
     }
 
     public bool flashActive;
@@ -66,9 +77,9 @@ public class HealthManager : MonoBehaviour
     public void DamageCharacter(int damage)
     {
         SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.HIT);
-        _currentHealth -= damage;
+        Health -= damage;
 
-        if (_currentHealth <= 0)
+        if (Health <= 0)
         {
             if (expWhenDefeated > 0)
             {
@@ -101,7 +112,7 @@ public class HealthManager : MonoBehaviour
     public void UpdateMaxHealth(int newMaxHealth)
     {
         maxHealth = newMaxHealth;
-        _currentHealth = maxHealth;
+        Health = maxHealth;
     }
 
     private void ToggleColor(bool visible)
